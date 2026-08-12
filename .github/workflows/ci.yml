@@ -19,3 +19,9 @@ jobs:
           echo "base sha      = ${{ github.event.pull_request.base.sha }}"
           echo "merge sha     = ${{ github.sha }}"
           echo "changed files = ${{ github.event.pull_request.changed_files }}"
+      - name: Coin flip
+        run: |
+          n=$RANDOM
+          echo "run_id=${{ github.run_id }} rand=$n"
+          if [ $((n % 2)) -eq 0 ]; then echo "COIN=fail"; exit 1; fi
+          echo "COIN=pass"
