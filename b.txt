@@ -1,2 +1,2 @@
 layer target B
-line-b1
+line-b1 (edited by layer-2)
