@@ -1,2 +1,2 @@
-CONFLICT_LINE = set-by-layer-1-hotfix
+CONFLICT_LINE = set-by-layer-3 (resolved, was layer-1 hotfix)
 keep-this-line
