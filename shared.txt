@@ -1,0 +1,2 @@
+CONFLICT_LINE = original
+keep-this-line

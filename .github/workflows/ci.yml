@@ -1,0 +1,16 @@
+name: ci
+on:
+  pull_request:
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report refs
+        run: |
+          echo "event         = ${{ github.event_name }}"
+          echo "pr number     = ${{ github.event.pull_request.number }}"
+          echo "head ref      = ${{ github.head_ref }}"
+          echo "base ref      = ${{ github.base_ref }}"
+          echo "base sha      = ${{ github.event.pull_request.base.sha }}"
+          echo "merge sha     = ${{ github.sha }}"
+          echo "changed files = ${{ github.event.pull_request.changed_files }}"
